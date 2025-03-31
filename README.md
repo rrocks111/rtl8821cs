@@ -1,4 +1,4 @@
-##### 第二步，安装编译工具
+#### 第一步，安装编译工具
 mkdir -p /usr/local/toolchain
 cd /usr/local/toolchain
 #### 下载编译工具
@@ -9,7 +9,7 @@ tar -Jxf arm-gnu-toolchain-13.3.rel1-aarch64-aarch64-none-elf.tar.xz
 armbian-kernel -u
 
 
-#### 第三步，下载驱动，编译
+#### 第二步，下载驱动，编译
 #### 下载驱动源码
 cd ~/
 git clone https://github.com/u-osmi/rtl8821cs.git
@@ -29,7 +29,7 @@ export M="/root/rtl8821cs"
 make
 
 
-#### 第四步，安装驱动
+#### 第三步，安装驱动
 sudo cp -f 8821cs.ko /lib/modules/$(uname -r)/kernel/drivers/net/wireless/
 #### 更新模块依赖关系
 sudo depmod -a
