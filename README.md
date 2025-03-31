@@ -1,4 +1,4 @@
-#### 第二步，安装编译工具
+##### 第二步，安装编译工具
 mkdir -p /usr/local/toolchain
 cd /usr/local/toolchain
 #### 下载编译工具
