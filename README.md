@@ -1,4 +1,4 @@
-#### 第一步，安装编译工具
+### 第一步，安装编译工具
 mkdir -p /usr/local/toolchain  
 cd /usr/local/toolchain
 #### 下载编译工具
@@ -29,7 +29,7 @@ export M="/root/rtl8821cs"
 make
 
 
-#### 第三步，安装驱动
+### 第三步，安装驱动
 sudo cp -f 8821cs.ko /lib/modules/$(uname -r)/kernel/drivers/net/wireless/
 #### 更新模块依赖关系
 sudo depmod -a
