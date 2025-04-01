@@ -27,14 +27,14 @@ make
 
 
 ### 第三步，安装驱动
-sudo mkdir /lib/modules/$(uname -r)/kernel/drivers/net/wireless/rtl8821cs
+sudo mkdir /lib/modules/$(uname -r)/kernel/drivers/net/wireless/rtl8821cs  
 sudo cp -f 8821cs.ko /lib/modules/$(uname -r)/kernel/drivers/net/wireless/rtl8821cs
 #### 更新模块依赖关系
 sudo depmod -a
 #### 加载驱动模块
-sudo modprobe 8821cs
+sudo modprobe rtl8821cs
 #### 检查驱动是否加载成功
-lsmod | grep 8821cs
+lsmod | grep rtl8821cs
 #### 可以看到成功加载驱动
-8821cs               1843200  0  
-cfg80211              917504  2 88x2cs,brcmfmac
+8822cs               1843200  0  
+cfg80211              917504  2 8822cs,brcmfmac
