@@ -38,5 +38,5 @@ sudo modprobe 8821cs
 #### 检查驱动是否加载成功
 lsmod | grep 8821cs
 #### 可以看到成功加载驱动
-8821cs               1843200  0
+8821cs               1843200  0  
 cfg80211              917504  2 88x2cs,brcmfmac
