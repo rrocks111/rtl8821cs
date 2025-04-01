@@ -5,9 +5,6 @@ cd /usr/local/toolchain
 wget https://github.com/ophub/kernel/releases/download/dev/arm-gnu-toolchain-13.3.rel1-aarch64-aarch64-none-elf.tar.xz
 #### 解压
 tar -Jxf arm-gnu-toolchain-13.3.rel1-aarch64-aarch64-none-elf.tar.xz
-#### 安装其他编译依赖包（可选项，可根据错误提示手动安装缺少项）
-armbian-kernel -u
-
 
 ### 第二步，下载驱动，编译
 #### 下载驱动源码
