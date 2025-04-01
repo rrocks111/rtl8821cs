@@ -2385,8 +2385,8 @@ _PLATFORM_FILES += platform/platform_aml_s905_sdio.o
 endif
 
 ARCH ?= arm64
-CROSS_COMPILE /usr/local/toolchain/arm-gnu-toolchain-13.3.rel1-aarch64-aarch64-none-elf/bin/aarch64-none-elf-
-KSRC := /usr/lib/modules/x.x.x-ophub/build
+CROSS_COMPILE := /usr/local/toolchain/arm-gnu-toolchain-13.3.rel1-aarch64-aarch64-none-elf/bin/aarch64-none-elf-
+KSRC := /usr/lib/modules/5.15.179-ophub/build
 MODULE_NAME := rtl8821cs
 
 endif
