@@ -30,7 +30,8 @@ make
 
 
 ### 第三步，安装驱动
-sudo cp -f 8821cs.ko /lib/modules/$(uname -r)/kernel/drivers/net/wireless/
+sudo mkdir /lib/modules/$(uname -r)/kernel/drivers/net/wireless/rtl8821cs
+sudo cp -f 8821cs.ko /lib/modules/$(uname -r)/kernel/drivers/net/wireless/rtl8821cs
 #### 更新模块依赖关系
 sudo depmod -a
 #### 加载驱动模块
