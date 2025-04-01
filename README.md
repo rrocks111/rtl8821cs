@@ -1,6 +1,5 @@
 #### 第一步，安装编译工具
-mkdir -p /usr/local/toolchain
-
+mkdir -p /usr/local/toolchain  
 cd /usr/local/toolchain
 #### 下载编译工具
 wget https://github.com/ophub/kernel/releases/download/dev/arm-gnu-toolchain-13.3.rel1-aarch64-aarch64-none-elf.tar.xz
@@ -12,10 +11,8 @@ armbian-kernel -u
 
 #### 第二步，下载驱动，编译
 #### 下载驱动源码
-cd ~/
-
-git clone https://github.com/u-osmi/rtl8821cs.git
-
+cd ~/  
+git clone https://github.com/u-osmi/rtl8821cs.git  
 cd rtl8821cs
 #### 设置编译环境
 gun_file="arm-gnu-toolchain-13.3.rel1-aarch64-aarch64-none-elf.tar.xz"
