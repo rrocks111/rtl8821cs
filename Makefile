@@ -210,7 +210,7 @@ CONFIG_PLATFORM_ARM_TCC8900 = n
 CONFIG_PLATFORM_ARM_TCC8920 = n
 CONFIG_PLATFORM_ARM_TCC8920_JB42 = n
 CONFIG_PLATFORM_ARM_TCC8930_JB42 = n
-CONFIG_PLATFORM_ARM_RK2818 = y
+CONFIG_PLATFORM_ARM_RK2818 = n
 CONFIG_PLATFORM_ARM_RK3066 = n
 CONFIG_PLATFORM_ARM_RK3188 = n
 CONFIG_PLATFORM_ARM_URBETTER = n
@@ -247,7 +247,7 @@ CONFIG_PLATFORM_HISILICON_HI3798 = n
 CONFIG_PLATFORM_NV_TK1 = n
 CONFIG_PLATFORM_NV_TK1_UBUNTU = n
 CONFIG_PLATFORM_RTL8197D = n
-CONFIG_PLATFORM_AML_S905 = n
+CONFIG_PLATFORM_AML_S905 = y
 CONFIG_PLATFORM_ZTE_ZX296716 = n
 CONFIG_PLATFORM_MTK9612 = n
 ########### CUSTOMER ################################
@@ -2385,22 +2385,9 @@ _PLATFORM_FILES += platform/platform_aml_s905_sdio.o
 endif
 
 ARCH ?= arm64
-CROSS_COMPILE ?= /4.4_S905L_8822bs_compile/gcc-linaro-aarch64-linux-gnu-4.9-2014.09_linux/bin/aarch64-linux-gnu-
-ifndef KSRC
-############ ANDROID COMMON KERNEL ############
-KSRC := $(KERNEL_SRC)
-#KSRC := /4.4_S905L_8822bs_compile/common
-# To locate output files in a separate directory.
-#KSRC += O=/4.4_S905L_8822bs_compile/KERNEL_OBJ
-endif
-
-
-ifeq ($(CONFIG_RTL8822B), y)
-ifeq ($(CONFIG_SDIO_HCI), y)
-CONFIG_RTL8822BS ?= m
-USER_MODULE_NAME := 8822bs
-endif
-endif
+CROSS_COMPILE /usr/local/toolchain/arm-gnu-toolchain-13.3.rel1-aarch64-aarch64-none-elf/bin/aarch64-none-elf-
+KSRC := /usr/lib/modules/x.x.x-ophub/build
+MODULE_NAME := rtl8821cs
 
 endif
 
